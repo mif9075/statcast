@@ -4,6 +4,15 @@ function init() {
     console.log(`Requesting data.`);
     sendRequest(); 
     console.log('Displaying network response:');
+
+    document.querySelector('.redsox')
+        .addEventListener('click', toggleRedSox);
+    document.querySelector('.mets')
+        .addEventListener('click', toggleMets);
+    document.querySelector('.yankees')
+        .addEventListener('click', toggleYankees);
+
+
 }
 
 function sendRequest() {

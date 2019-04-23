@@ -1,10 +1,6 @@
 window.onload = init;
 
 function init() {
-    // console.log(`Requesting data.`);
-    // sendRequest(); 
-    // console.log('Displaying network response:');
-
     document.getElementById('option5')
         .addEventListener('click', buttonRequest);
     document.querySelector('#option4')
@@ -16,24 +12,8 @@ function init() {
     document.querySelector('#option1')
         .addEventListener('click', buttonRequest);
 
-    // document.querySelector('.regular')
-    //     .addEventListener('click', toggleRegular);
-    // document.querySelector('.post')
-    //     .addEventListener('click', togglePost);
-
-    // document.querySelector('.hr')
-    //     .addEventListener('click', toggleHr);
-    // document.querySelector('.exit')
-    //     .addEventListener('click', toggleExit);
-    // document.querySelector('.average-exit')
-    //     .addEventListener('click', toggleAverageExit);
-    // document.querySelector('.fastest')
-    //     .addEventListener('click', toggleFastest);
-    // document.querySelector('.average-pitch')
-    //     .addEventListener('click', toggleAveragePitch);
 }
 function buttonRequest(event){
-    // event.preventDefault();
     let num = event.target.innerText
     sendRequest(num);
     console.log('hello')
@@ -41,20 +21,7 @@ function buttonRequest(event){
 function sendRequest(num) {
 
     const xhr = new XMLHttpRequest();
-    // let url = 'http://lookup-service-prod.mlb.com/json/named.psc_leader_hit_hr_dist.bam?season=2019&game_type=%27D%27&game_type=%27L%27&game_type%27W%27&game_type=%27F%27&min_hip_count=15';
     let url = `http://lookup-service-prod.mlb.com/json/named.psc_leader_hit_hr_dist.bam?season=${num}&game_type=%27D%27&game_type=%27L%27&game_type%27W%27&game_type=%27F%27&min_hip_count=15`;
-
-    // if (num === 2015){
-    //     url = 'http://lookup-service-prod.mlb.com/json/named.psc_leader_hit_hr_dist.bam?season=2015&game_type=%27D%27&game_type=%27L%27&game_type%27W%27&game_type=%27F%27&min_hip_count=15';
-    // } else if (num === 2016) {
-    //     url = 'http://lookup-service-prod.mlb.com/json/named.psc_leader_hit_hr_dist.bam?season=2016&game_type=%27D%27&game_type=%27L%27&game_type%27W%27&game_type=%27F%27&min_hip_count=15';
-    // } else if (num === 2017) {
-    //     url = 'http://lookup-service-prod.mlb.com/json/named.psc_leader_hit_hr_dist.bam?season=2017&game_type=%27D%27&game_type=%27L%27&game_type%27W%27&game_type=%27F%27&min_hip_count=15';
-    // } else if (num === 2018) {
-    //     url = 'http://lookup-service-prod.mlb.com/json/named.psc_leader_hit_hr_dist.bam?season=2018&game_type=%27D%27&game_type=%27L%27&game_type%27W%27&game_type=%27F%27&min_hip_count=15';
-    // } else if (num === 2019) {
-    //     url = 'http://lookup-service-prod.mlb.com/json/named.psc_leader_hit_hr_dist.bam?season=2019&game_type=%27D%27&game_type=%27L%27&game_type%27W%27&game_type=%27F%27&min_hip_count=15';
-    // }
 
     xhr.open('GET', url);
     xhr.onload = handleData;

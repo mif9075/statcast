@@ -16,18 +16,15 @@ function sendRequest() {
 
 function handleData(event) {
     const person = JSON.parse(event.target.responseText);
-    // const {batter} = person;
-    // console.log(batter);
     console.log(person.psc_leader_hit_hr_dist.queryResults.row[0].batter);
     console.log(person.psc_leader_hit_hr_dist.queryResults.row.length);
-    // const player = person.psc_leader_hit_hr_dist.queryResults.row[0].batter;
-    
     displayTable(person);
 }
 
 function displayTable(player){
 
     // clearList();
+
     for (let i = 0; i < player.psc_leader_hit_hr_dist.queryResults.row.length; i++) {
 
     const batterNumTD = document.querySelector('.batter');
@@ -67,7 +64,7 @@ function displayTable(player){
 
     const dateNumTD = document.querySelector('.date');
     const dateNumData = document.createElement('p');
-    dateNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].game_id;
+    dateNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].game_date;
     dateNumTD.appendChild(dateNumData);
 
     }
@@ -79,8 +76,7 @@ function clearList() {
 }
 
 function removeAllChildrenOfOl() {
-    const ol = document.querySelector('#batter');
-
+    const ol = document.querySelector('.batter');
     while (ol.hasChildNodes()) {
         ol.removeChild(ol.firstChild);
     }

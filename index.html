@@ -14,6 +14,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </head>
+
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,19 +61,38 @@
                     <a class="nav-link" href="#">AUCTION</a>
                 </li>
               </ul>
-              <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form> -->
             </div>
 
         </nav>
 
+        <br>
         <h3>Statcast Leaderboard</h3>
         <p>HR DISTANCE</p>
         <p>Post Season - 2018</p>
 
-        <!-- <div class="table-responsive-sm"> -->
+
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-light active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> HR DISTANCE
+            </label>
+            <label class="btn btn-light">
+              <input type="radio" name="options" id="option2" autocomplete="off"> EXIT VELOCITY
+            </label>
+            <label class="btn btn-light">
+              <input type="radio" name="options" id="option3" autocomplete="off"> AVERAGE EXIT VELOCITY
+            </label>
+            <label class="btn btn-light">
+                <input type="radio" name="options" id="option3" autocomplete="off"> FASTEST PITCHES
+            </label>
+            <label class="btn btn-light">
+                <input type="radio" name="options" id="option3" autocomplete="off"> AVERAGE PITCH VELOCITY
+            </label>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="table-responsive-sm">
         <table class="table table-sm">
             <thead>
               <tr>
@@ -86,6 +106,7 @@
                 <th scope="col">Date</th>
             </tr>
             </thead>
+
             <tbody>
               <tr>
                 <th scope="row" class="batter" ></th>
@@ -97,21 +118,9 @@
                 <td class="pitch"></td>
                 <td class="date"></td>
               </tr>
-              <!-- <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr> -->
             </tbody>
+
           </table>
-        <!-- </div> -->
-
-
+        </div>
     </body>
 </html>

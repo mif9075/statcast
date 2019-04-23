@@ -5,14 +5,30 @@ function init() {
     sendRequest(); 
     console.log('Displaying network response:');
 
-    document.querySelector('.redsox')
+    document.querySelector('.2015')
         .addEventListener('click', toggleRedSox);
-    document.querySelector('.mets')
+    document.querySelector('.2016')
         .addEventListener('click', toggleMets);
-    document.querySelector('.yankees')
+    document.querySelector('.2017')
+        .addEventListener('click', toggleYankees);
+    document.querySelector('.2018')
         .addEventListener('click', toggleYankees);
 
+    document.querySelector('.regular')
+        .addEventListener('click', toggleRedSox);
+    document.querySelector('.post')
+        .addEventListener('click', toggleMets);
 
+    document.querySelector('.hr')
+        .addEventListener('click', toggleRedSox);
+    document.querySelector('.exit')
+        .addEventListener('click', toggleMets);
+    document.querySelector('.average-exit')
+        .addEventListener('click', toggleYankees);
+    document.querySelector('.fastest')
+        .addEventListener('click', toggleYankees);
+    document.querySelector('.average-pitch')
+        .addEventListener('click', toggleYankees);
 }
 
 function sendRequest() {

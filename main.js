@@ -69,7 +69,7 @@ function handleData(event) {
 
 function displayTable(player){
 
-    // clearList();
+    clearList();
 
     for (let i = 0; i < player.psc_leader_hit_hr_dist.queryResults.row.length; i++) {
 
@@ -126,5 +126,39 @@ function removeAllChildrenOfOl() {
     while (ol.hasChildNodes()) {
         ol.removeChild(ol.firstChild);
     }
+
+    const ol1 = document.querySelector('.distance');
+    while (ol1.hasChildNodes()) {
+        ol1.removeChild(ol1.firstChild);
+    }
     
+    const ol2 = document.querySelector('.exit');
+    while (ol2.hasChildNodes()) {
+        ol2.removeChild(ol2.firstChild);
+    }
+
+    const ol3 = document.querySelector('.launch');
+    while (ol3.hasChildNodes()) {
+        ol3.removeChild(ol3.firstChild);
+    }
+
+    const ol4 = document.querySelector('.height');
+    while (ol4.hasChildNodes()) {
+        ol4.removeChild(ol4.firstChild);
+    }
+
+    const ol5 = document.querySelector('.pitcher');
+    while (ol5.hasChildNodes()) {
+        ol5.removeChild(ol5.firstChild);
+    }
+
+    const ol6 = document.querySelector('.pitch');
+    while (ol6.hasChildNodes()) {
+        ol6.removeChild(ol6.firstChild);
+    }
+
+    const ol7 = document.querySelector('.date');
+    while (ol7.hasChildNodes()) {
+        ol7.removeChild(ol7.firstChild);
+    }
 }

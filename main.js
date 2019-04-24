@@ -38,48 +38,57 @@ function displayTable(player){
 
     clearList();
 
-    for (let i = 0; i < player.psc_leader_hit_hr_dist.queryResults.row.length; i++) {
+    if (player.psc_leader_hit_hr_dist.queryResults.totalSize === "0") {
+        const noDataTD = document.querySelector('.no_data');
+        const noDataData = document.createElement('p');
+        noDataData.innerText = "No data for this game type/year combination";
+        noDataTD.appendChild(noDataData);
 
-    const batterNumTD = document.querySelector('.batter');
-    const batterNumData = document.createElement('p');
-    batterNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].batter;
-    batterNumTD.appendChild(batterNumData);
+        }else{
 
-    const distanceNumTD = document.querySelector('.distance');
-    const distanceNumData = document.createElement('p');
-    distanceNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].distance;
-    distanceNumTD.appendChild(distanceNumData);
+        for (let i = 0; i < player.psc_leader_hit_hr_dist.queryResults.row.length; i++) {
 
-    const exitNumTD = document.querySelector('.launch_speed');
-    const exitNumData = document.createElement('p');
-    exitNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].launch_speed;
-    exitNumTD.appendChild(exitNumData);
+        const batterNumTD = document.querySelector('.batter');
+        const batterNumData = document.createElement('p');
+        batterNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].batter;
+        batterNumTD.appendChild(batterNumData);
 
-    const launchNumTD = document.querySelector('.launch_angle');
-    const launchNumData = document.createElement('p');
-    launchNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].launch_angle;
-    launchNumTD.appendChild(launchNumData);
+        const distanceNumTD = document.querySelector('.distance');
+        const distanceNumData = document.createElement('p');
+        distanceNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].distance;
+        distanceNumTD.appendChild(distanceNumData);
 
-    const heightNumTD = document.querySelector('.height');
-    const heightNumData = document.createElement('p');
-    heightNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].height;
-    heightNumTD.appendChild(heightNumData);
+        const exitNumTD = document.querySelector('.launch_speed');
+        const exitNumData = document.createElement('p');
+        exitNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].launch_speed;
+        exitNumTD.appendChild(exitNumData);
 
-    const pitcherNumTD = document.querySelector('.pitcher');
-    const pitcherNumData = document.createElement('p');
-    pitcherNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].pitcher;
-    pitcherNumTD.appendChild(pitcherNumData);
+        const launchNumTD = document.querySelector('.launch_angle');
+        const launchNumData = document.createElement('p');
+        launchNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].launch_angle;
+        launchNumTD.appendChild(launchNumData);
 
-    const pitchNumTD = document.querySelector('.pitch_speed');
-    const pitchNumData = document.createElement('p');
-    pitchNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].pitch_speed;
-    pitchNumTD.appendChild(pitchNumData);
+        const heightNumTD = document.querySelector('.height');
+        const heightNumData = document.createElement('p');
+        heightNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].height;
+        heightNumTD.appendChild(heightNumData);
 
-    const dateNumTD = document.querySelector('.game_date');
-    const dateNumData = document.createElement('p');
-    dateNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].game_date;
-    dateNumTD.appendChild(dateNumData);
+        const pitcherNumTD = document.querySelector('.pitcher');
+        const pitcherNumData = document.createElement('p');
+        pitcherNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].pitcher;
+        pitcherNumTD.appendChild(pitcherNumData);
 
+        const pitchNumTD = document.querySelector('.pitch_speed');
+        const pitchNumData = document.createElement('p');
+        pitchNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].pitch_speed;
+        pitchNumTD.appendChild(pitchNumData);
+
+        const dateNumTD = document.querySelector('.game_date');
+        const dateNumData = document.createElement('p');
+        dateNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].game_date;
+        dateNumTD.appendChild(dateNumData);
+
+        }
     }
 }
 
@@ -128,4 +137,10 @@ function removeAllChildrenOfOl() {
     while (ol7.hasChildNodes()) {
         ol7.removeChild(ol7.firstChild);
     }
+
+    const ol8 = document.querySelector('.no_data');
+    while (ol8.hasChildNodes()) {
+        ol8.removeChild(ol8.firstChild);
+    }
+
 }

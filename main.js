@@ -11,8 +11,8 @@ function init() {
         .addEventListener('click', buttonRequest);
     document.querySelector('#option2015')
         .addEventListener('click', buttonRequest);
-
 }
+
 function buttonRequest(event){
     let num = event.target.innerText
     sendRequest(num);
@@ -50,12 +50,12 @@ function displayTable(player){
     distanceNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].distance;
     distanceNumTD.appendChild(distanceNumData);
 
-    const exitNumTD = document.querySelector('.exit');
+    const exitNumTD = document.querySelector('.launch_speed');
     const exitNumData = document.createElement('p');
     exitNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].launch_speed;
     exitNumTD.appendChild(exitNumData);
 
-    const launchNumTD = document.querySelector('.launch');
+    const launchNumTD = document.querySelector('.launch_angle');
     const launchNumData = document.createElement('p');
     launchNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].launch_angle;
     launchNumTD.appendChild(launchNumData);
@@ -70,12 +70,12 @@ function displayTable(player){
     pitcherNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].pitcher;
     pitcherNumTD.appendChild(pitcherNumData);
 
-    const pitchNumTD = document.querySelector('.pitch');
+    const pitchNumTD = document.querySelector('.pitch_speed');
     const pitchNumData = document.createElement('p');
     pitchNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].pitch_speed;
     pitchNumTD.appendChild(pitchNumData);
 
-    const dateNumTD = document.querySelector('.date');
+    const dateNumTD = document.querySelector('.game_date');
     const dateNumData = document.createElement('p');
     dateNumData.innerText = player.psc_leader_hit_hr_dist.queryResults.row[i].game_date;
     dateNumTD.appendChild(dateNumData);
@@ -99,12 +99,12 @@ function removeAllChildrenOfOl() {
         ol1.removeChild(ol1.firstChild);
     }
     
-    const ol2 = document.querySelector('.exit');
+    const ol2 = document.querySelector('.launch_speed');
     while (ol2.hasChildNodes()) {
         ol2.removeChild(ol2.firstChild);
     }
 
-    const ol3 = document.querySelector('.launch');
+    const ol3 = document.querySelector('.launch_angle');
     while (ol3.hasChildNodes()) {
         ol3.removeChild(ol3.firstChild);
     }
@@ -119,12 +119,12 @@ function removeAllChildrenOfOl() {
         ol5.removeChild(ol5.firstChild);
     }
 
-    const ol6 = document.querySelector('.pitch');
+    const ol6 = document.querySelector('.pitch_speed');
     while (ol6.hasChildNodes()) {
         ol6.removeChild(ol6.firstChild);
     }
 
-    const ol7 = document.querySelector('.date');
+    const ol7 = document.querySelector('.game_date');
     while (ol7.hasChildNodes()) {
         ol7.removeChild(ol7.firstChild);
     }

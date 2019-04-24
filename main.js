@@ -1,7 +1,7 @@
 window.onload = init;
 
 function init() {
-    document.getElementById('option2019')
+    document.querySelector('#option2019')
         .addEventListener('click', buttonRequest);
     document.querySelector('#option2018')
         .addEventListener('click', buttonRequest);
@@ -14,9 +14,8 @@ function init() {
 }
 
 function buttonRequest(event){
-    let num = event.target.innerText
+    let num = event.target.innerText;
     sendRequest(num);
-    console.log('hello')
 }
 function sendRequest(num) {
 
@@ -26,6 +25,7 @@ function sendRequest(num) {
     xhr.open('GET', url);
     xhr.onload = handleData;
     xhr.send();
+
     console.log(url)
 }
 

@@ -1,15 +1,15 @@
 window.onload = init;
 
 function init() {
-    document.getElementById('option5')
+    document.getElementById('option2019')
         .addEventListener('click', buttonRequest);
-    document.querySelector('#option4')
+    document.querySelector('#option2018')
         .addEventListener('click', buttonRequest);
-    document.querySelector('#option3')
+    document.querySelector('#option2017')
         .addEventListener('click', buttonRequest);
-    document.querySelector('#option2')
+    document.querySelector('#option2016')
         .addEventListener('click', buttonRequest);
-    document.querySelector('#option1')
+    document.querySelector('#option2015')
         .addEventListener('click', buttonRequest);
 
 }
